@@ -1,5 +1,0 @@
-select name, (date(date_parse(ts, '%Y-%m-%d %H:%i:%s'))) as Date, round(avg(volatility),3) as avg_volatility, max(volatility) as max_volatility,
-min(volatility) as min_volatility
-from "cis_9760_project03" 
-group by name, (date(date_parse(ts, '%Y-%m-%d %H:%i:%s')))
-order by name, (date(date_parse(ts, '%Y-%m-%d %H:%i:%s')))
